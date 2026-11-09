@@ -1,0 +1,12 @@
+node_modules/
+web/dist/
+web/public/ocr/
+app/public/v2/
+*.tsbuildinfo
+.env
+backups/*
+!backups/.keep
+import/*
+!import/.keep
+*.bak
+*.log
