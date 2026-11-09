@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حسابداری ۶ سطحی معین تراز</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfbfd;--c:#fff;--t:#1d1d1f;--m:#6e6e73;--p:#0a6cff;--b:#e5e5ea;--r:#d92d20;--soft:#f2f4f8}
+@media(prefers-color-scheme:dark){:root{--bg:#0b0b0d;--c:#1c1c1f;--t:#f5f5f7;--m:#a1a1a6;--b:#323236;--soft:#161618}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:15px/1.8 Vazirmatn,Tahoma,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:18px 20px}
+header b{font-size:15px;font-weight:700}
+header a{color:var(--p);text-decoration:none;font-size:14px}
+.hero{max-width:1100px;margin:0 auto;padding:30px 20px 50px;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:44px;line-height:1.35;margin:0 0 14px;font-weight:800;letter-spacing:-.5px}
+.hero h1 span{color:var(--p)}
+.hero>div>p{color:var(--m);font-size:17px;margin:0 0 6px;max-width:520px}
+.login{background:var(--c);border:1px solid var(--b);border-radius:20px;padding:26px;box-shadow:0 10px 40px #0000000d}
+.login h2{margin:0 0 4px;font-size:20px}
+.login .sub{color:var(--m);font-size:13px;margin:0 0 16px}
+.fld{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
+.fld label{font-size:12.5px;color:var(--m)}
+.fld input{font:inherit;padding:11px 13px;border:1px solid var(--b);border-radius:11px;background:var(--bg);color:var(--t);outline:0}
+.fld input:focus{border-color:var(--p);box-shadow:0 0 0 3px #0a6cff22}
+.ltr{direction:ltr;text-align:left}
+.chk{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--m);margin:2px 0 14px}
+.btn{width:100%;font:inherit;font-weight:600;padding:12px;border:0;border-radius:12px;background:var(--p);color:#fff;cursor:pointer;font-size:15px}
+.btn:disabled{opacity:.5;cursor:wait}
+.btn.s{background:var(--soft);color:var(--t);border:1px solid var(--b);margin-top:10px}
+.err{color:var(--r);font-size:13px;min-height:20px;margin:0 0 8px}
+.hint{font-size:12px;color:var(--m);margin-top:12px}
+.sec{max-width:1100px;margin:0 auto;padding:20px 20px 50px}
+.sec h3{font-size:26px;margin:0 0 6px;font-weight:700}
+.sec .lead{color:var(--m);margin:0 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--c);border:1px solid var(--b);border-radius:18px;padding:20px}
+.card i{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--soft);font-style:normal;font-size:19px;margin-bottom:10px}
+.card b{display:block;font-size:15.5px;margin-bottom:4px}
+.card span{color:var(--m);font-size:13.5px}
+footer{max-width:1100px;margin:0 auto;padding:20px;color:var(--m);font-size:12.5px;border-top:1px solid var(--b)}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:26px}.hero h1{font-size:32px}}
+</style>
+</head>
+<body>
+<header><b>حسابداری ۶ سطحی معین تراز</b><a href="#about">امکانات</a></header>
+
+<section class="hero">
+  <div>
+    <h1>حسابداری ۶ سطحی<br><span>معین تراز</span></h1>
+    <p>حسابداری برای کلیه صنایع و مشاغل، اعم از حقیقی و حقوقی، بازرگانی، تولیدی، پیمانکاری و مشاغل در ایران — مناسب کسب‌وکارهای کوچک و متوسط.</p>
+  </div>
+
+  <div class="login" id="box">
+    <h2>در حال بارگذاری…</h2>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <h3>آنچه در این نرم‌افزار انجام می‌شود</h3>
+  <p class="lead">هر شرکت اطلاعات جداگانه دارد و فقط کاربر همان شرکت به آن دسترسی دارد.</p>
+  <div class="grid">
+    <div class="card"><i>📒</i><b>حسابداری و اسناد</b><span>ثبت اسناد حسابداری، دفاتر و گزارش‌ها برای اشخاص حقیقی و حقوقی.</span></div>
+    <div class="card"><i>🏭</i><b>تولید و انبار</b><span>سفارش تولید، مواد و موجودی برای واحدهای تولیدی.</span></div>
+    <div class="card"><i>🏗️</i><b>پیمانکاری و بهای تمام‌شده خدمات</b><span>قرارداد، نیروی کار، ماشین‌آلات و سربار برای پیمانکاران و شرکت‌های خدماتی.</span></div>
+    <div class="card"><i>🧾</i><b>فاکتور خرید</b><span>ثبت دستی، از روی اسکن یا ورود از Excel، همراه با هزینه‌ها و پرداخت‌ها.</span></div>
+    <div class="card"><i>📤</i><b>فاکتور فروش و سامانه مودیان</b><span>ثبت، ارسال، استعلام، ابطال و اصلاح صورتحساب برای چند شرکت، با الگوهای فروش و پیمانکاری.</span></div>
+    <div class="card"><i>📦</i><b>کالا، خدمات و موجودی</b><span>تعریف کالا و خدمت، گروه‌ها و واحدها، و گزارش موجودی بر پایه‌ی فاکتورها.</span></div>
+    <div class="card"><i>🖨️</i><b>چاپ فاکتور</b><span>خروجی چاپی فاکتور فروش با شرح قابل‌ویرایش برای هر ردیف.</span></div>
+    <div class="card"><i>👥</i><b>کاربر مخصوص هر شرکت</b><span>هر شرکت/مشتری نام کاربری و رمز جداگانه دارد و فقط اطلاعات خودش را می‌بیند؛ مدیر سیستم به همه‌ی شرکت‌ها دسترسی دارد.</span></div>
+    <div class="card"><i>💾</i><b>پشتیبان‌گیری</b><span>هر شب یک نسخه‌ی پشتیبان خودکار و امکان تهیه‌ی نسخه‌ی دستی.</span></div>
+  </div>
+</section>
+
+<footer>حسابداری ۶ سطحی معین تراز · خروجی‌ها «تحلیل و ثبت کمکی» هستند و جایگزین نظر حسابدار رسمی یا سازمان امور مالیاتی نیستند.</footer>
+
+<script>
+var $=function(s){return document.querySelector(s)};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function tok(){try{return sessionStorage.getItem('mt_token')||localStorage.getItem('mt_token')||''}catch(x){return''}}
+function clearTok(){try{sessionStorage.removeItem('mt_token');localStorage.removeItem('mt_token')}catch(x){}}
+function saveTok(t,rem){clearTok();try{(rem?localStorage:sessionStorage).setItem('mt_token',t)}catch(x){alert('مرورگر اجازه‌ی ذخیره‌ی نشست را نمی‌دهد.')}}
+function api(a,p){return fetch('/api',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({t:tok(),a:a,p:p||{}})}).then(function(r){if(!r.ok)throw new Error('خطای ارتباط با سرور ('+r.status+')');return r.json()}).then(function(r){if(!r.ok)throw new Error(r.error);return r.data})}
+
+function view(h){$('#box').innerHTML=h}
+var CANREG=false,CAPON=true,REGMAILOFF=false,capTok='';
+function capBox(){return'<div class="fld"><label>کد امنیتی (عدد داخل تصویر را وارد کنید)</label><div style="display:flex;gap:8px;align-items:center"><img id="capimg" alt="کد امنیتی" width="168" height="56" style="border-radius:8px;border:1px solid #d5dbe6;background:#f4f6fa"><button type="button" class="btn s" style="width:auto;padding:8px 12px" onclick="capLoad()" title="کد جدید">↻</button></div><input id="capa" class="ltr" inputmode="numeric" autocomplete="off" maxlength="6" placeholder="مثلاً 48213" style="margin-top:8px"></div>'}
+function capLoad(){capTok='';var a=$('#capa');if(a)a.value='';api('captcha').then(function(c){capTok=c.tok;var i=$('#capimg');if(i)i.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(c.svg)}).catch(function(x){var e=$('#er');if(e)e.textContent=x.message})}
+function loginForm(){
+ view('<h2>ورود به نرم‌افزار</h2><p class="sub">نام کاربری و رمز عبور خود را وارد کنید.</p><form id="f" autocomplete="on"><div class="fld"><label>نام کاربری</label><input id="u" class="ltr" autocomplete="username" autofocus></div><div class="fld"><label>رمز عبور</label><input id="p" type="password" class="ltr" autocomplete="current-password"></div><label class="chk"><input type="checkbox" id="rm"> مرا در این رایانه نگه دار (۳۰ روز)</label>'+(CAPON?capBox():'')+'<p class="err" id="er"></p><button class="btn" id="go">ورود</button></form>'+(CANREG?'<button class="btn s" type="button" onclick="regForm()">ثبت‌نام جدید</button><p class="hint">حساب ندارید؟ ثبت‌نام کنید؛ پس از تأیید ایمیل و تأیید مدیر می‌توانید وارد شوید. رمز را فراموش کرده‌اید؟ از مدیر سیستم بخواهید رمز جدید تعیین کند.</p>':'<p class="hint">نام کاربری و رمز اولیه را مدیر سیستم برای شما تعیین کرده است. رمز را فراموش کرده‌اید؟ از مدیر سیستم بخواهید رمز جدید تعیین کند.</p>'));
+ if(CAPON)capLoad();
+ $('#f').onsubmit=function(ev){ev.preventDefault();if(CAPON&&!$('#capa').value.trim()){$('#er').textContent='کد امنیتی را وارد کنید.';return}busy(true);
+  api('login',{username:$('#u').value,password:$('#p').value,remember:$('#rm').checked,capTok:capTok,capAns:CAPON?$('#capa').value:''}).then(function(r){saveTok(r.token,r.remember);if(r.me.mustChange){changeForm(r.me,$('#p').value)}else location.href='/app'}).catch(function(x){busy(false);$('#er').textContent=x.message;$('#p').value='';if(CAPON)capLoad();$('#p').focus()})}}
+function regForm(){
+ view('<h2>ثبت‌نام</h2><p class="sub">اطلاعات را کامل وارد کنید. پیوند تأیید به ایمیل شما ارسال می‌شود؛ پس از تأیید ایمیل و بررسی مدیر، حساب شما فعال می‌شود. هر ایمیل فقط یک‌بار می‌تواند ثبت‌نام کند.</p><form id="f" autocomplete="off"><div class="fld"><label>نام و نام خانوادگی *</label><input id="fn"></div><div class="fld"><label>نام شرکت / کسب‌وکار *</label><input id="co"></div><div class="fld"><label>شماره تلفن همراه *</label><input id="ph" class="ltr" inputmode="tel" placeholder="09121234567"></div><div class="fld"><label>ایمیل * (پیوند تأیید به آن ارسال می‌شود)</label><input id="em" class="ltr" type="email"></div><div class="fld"><label>نام کاربری * (انگلیسی، بدون فاصله)</label><input id="u" class="ltr" autocomplete="off"></div><div class="fld"><label>رمز عبور * (حداقل ۸ کاراکتر، شامل حرف انگلیسی و عدد)</label><input id="p" type="password" class="ltr" autocomplete="new-password"></div><div class="fld"><label>تکرار رمز عبور *</label><input id="p2" type="password" class="ltr" autocomplete="new-password"></div>'+capBox()+'<div style="position:absolute;left:-9999px" aria-hidden="true"><input id="web" tabindex="-1" autocomplete="off"></div><p class="err" id="er"></p><button class="btn" id="go">ارسال درخواست ثبت‌نام</button></form><button class="btn s" type="button" onclick="loginForm()">بازگشت به ورود</button>');
+ capLoad();
+ $('#f').onsubmit=function(ev){ev.preventDefault();if($('#p').value!==$('#p2').value){$('#er').textContent='تکرار رمز یکسان نیست.';return}busy(true);
+  api('register',{fullName:$('#fn').value,companyName:$('#co').value,phone:$('#ph').value,email:$('#em').value,username:$('#u').value,password:$('#p').value,capTok:capTok,capAns:$('#capa').value,website:$('#web').value}).then(function(r){sentView(r.email)}).catch(function(x){busy(false);$('#er').textContent=x.message;capLoad();if(/پیوند تأیید ارسال شده/.test(x.message))$('#er').innerHTML=esc(x.message)+'<br><button type="button" class="btn s" style="margin-top:8px" onclick="resendView($(\'#em\').value)">ارسال مجدد پیوند تأیید</button>'})}}
+function sentView(em){view('<h2>ایمیل تأیید ارسال شد</h2><p class="sub">پیوند تأیید به <b dir="ltr">'+esc(em)+'</b> ارسال شد. ایمیل را باز کنید (پوشه‌ی هرزنامه را هم ببینید) و تا ۲۴ ساعت دیگر روی پیوند بزنید. بعد از تأیید ایمیل، ثبت‌نام شما به تأیید مدیر می‌رسد و پس از آن می‌توانید وارد شوید.</p><p class="err" id="er"></p><button class="btn s" id="rs">ارسال مجدد پیوند تأیید</button><button class="btn" onclick="loginForm()">بازگشت به صفحهٔ ورود</button>');$('#rs').onclick=function(){resendView(em)}}
+function resendView(em){var e=$('#er');api('resendVerify',{email:em}).then(function(){view('<h2>ایمیل تأیید دوباره ارسال شد</h2><p class="sub">اگر درخواست ثبت‌نامِ تأییدنشده‌ای برای <b dir="ltr">'+esc(em)+'</b> وجود داشته باشد، پیوند تازه به آن ارسال شد (پیوند قبلی باطل شد).</p><button class="btn" onclick="loginForm()">بازگشت به صفحهٔ ورود</button>')}).catch(function(x){if(e)e.textContent=x.message;else alert(x.message)})}
+function setupForm(){
+ view('<h2>ایجاد مدیر اولیه</h2><p class="sub">این اولین اجرای نرم‌افزار است. حساب مدیر را بسازید؛ بعداً هر شرکت را همراه با کاربرش از داخل نرم‌افزار اضافه می‌کنید.</p><form id="f"><div class="fld"><label>نام و نام خانوادگی</label><input id="fn" autofocus></div><div class="fld"><label>نام کاربری (انگلیسی، بدون فاصله)</label><input id="u" class="ltr" autocomplete="username"></div><div class="fld"><label>رمز عبور (حداقل ۸ کاراکتر، شامل حرف انگلیسی و عدد)</label><input id="p" type="password" class="ltr" autocomplete="new-password"></div><div class="fld"><label>تکرار رمز</label><input id="p2" type="password" class="ltr" autocomplete="new-password"></div><p class="err" id="er"></p><button class="btn" id="go">ایجاد حساب و ورود</button></form><p class="hint">رمز مدیر را جایی امن یادداشت کنید؛ در صورت فراموشی، بازیابی آن نیاز به دسترسی فنی به سرور دارد.</p>');
+ $('#f').onsubmit=function(ev){ev.preventDefault();if($('#p').value!==$('#p2').value){$('#er').textContent='تکرار رمز یکسان نیست.';return}busy(true);
+  api('setupAdmin',{fullName:$('#fn').value,username:$('#u').value,password:$('#p').value}).then(function(r){saveTok(r.token,true);location.href='/app'}).catch(function(x){busy(false);$('#er').textContent=x.message})}}
+function changeForm(me,oldPw){
+ view('<h2>تعیین رمز جدید</h2><p class="sub">'+esc(me.fullName||me.username)+' عزیز، برای ادامه باید رمز اولیه را عوض کنید. نام کاربری شما (<b dir="ltr">'+esc(me.username)+'</b>) ثابت است و تغییر نمی‌کند.</p><form id="f"><div class="fld"><label>رمز فعلی (رمز اولیه)</label><input id="o" type="password" class="ltr" autocomplete="current-password" value="'+esc(oldPw||'')+'"></div><div class="fld"><label>رمز جدید (حداقل ۸ کاراکتر، شامل حرف انگلیسی و عدد)</label><input id="n1" type="password" class="ltr" autocomplete="new-password" autofocus></div><div class="fld"><label>تکرار رمز جدید</label><input id="n2" type="password" class="ltr" autocomplete="new-password"></div><p class="err" id="er"></p><button class="btn" id="go">ذخیره و ورود</button></form><button class="btn s" onclick="clearTok();boot()">خروج</button>');
+ $('#f').onsubmit=function(ev){ev.preventDefault();if($('#n1').value!==$('#n2').value){$('#er').textContent='تکرار رمز یکسان نیست.';return}busy(true);
+  api('changeMyPassword',{old:$('#o').value,password:$('#n1').value}).then(function(r){saveTok(r.token,r.remember);location.href='/app'}).catch(function(x){busy(false);$('#er').textContent=x.message})}}
+function welcome(me){
+ view('<h2>سلام، '+esc(me.fullName||me.username)+'</h2><p class="sub">با نام کاربری <b dir="ltr">'+esc(me.username)+'</b> وارد شده‌اید.</p><button class="btn" onclick="location.href=\'/app\'">ورود به نرم‌افزار</button><button class="btn s" onclick="clearTok();boot()">خروج و ورود با کاربر دیگر</button>')}
+function busy(b){var g=$('#go');if(!g)return;g.disabled=b;if(b){g.dataset.t=g.textContent;g.textContent='لطفاً صبر کنید…'}else if(g.dataset.t)g.textContent=g.dataset.t}
+function boot(){
+ api('authStatus').then(function(s){
+  CANREG=!!s.canRegister;CAPON=s.captcha!==false;REGMAILOFF=!!s.regMailOff;
+  if(!s.hasUsers)setupForm();else if(s.me&&s.me.mustChange)changeForm(s.me,'');else if(s.me)welcome(s.me);else{if(tok())clearTok();loginForm()}
+ }).catch(function(x){view('<h2>اتصال به سرور برقرار نشد</h2><p class="sub">'+esc(x.message)+'</p><button class="btn" onclick="boot()">تلاش دوباره</button>')})}
+boot();
+</script>
+</body>
+</html>

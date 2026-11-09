@@ -1,0 +1,21 @@
+/* فونت محلی (بدون وابستگی به اینترنت). مسیرها نسبت به base برنامه (/v2/) هستند. */
+@font-face { font-family: 'Vazirmatn'; font-weight: 400; font-display: swap; src: url('/v2/fonts/Vazirmatn-Regular.ttf?v=15') format('truetype'); }
+@font-face { font-family: 'Vazirmatn'; font-weight: 500; font-display: swap; src: url('/v2/fonts/Vazirmatn-Medium.ttf?v=15') format('truetype'); }
+@font-face { font-family: 'Vazirmatn'; font-weight: 700; font-display: swap; src: url('/v2/fonts/Vazirmatn-Bold.ttf?v=15') format('truetype'); }
+
+html, body, #root { height: 100%; margin: 0; }
+body { font-family: 'Vazirmatn', Tahoma, sans-serif; }
+
+/* اعداد: راست‌چین، ارقام فارسی (از خود فونت) */
+.num-cell { direction: ltr; text-align: right; font-variant-numeric: tabular-nums; }
+.num-input, .num-input input { direction: ltr; text-align: right; }
+.ant-input-number-input { text-align: right; }
+
+/* نوار سال مالی پایین صفحه در چاپ دیده نشود */
+@media print { .fy-bar { display: none !important; } }
+
+/* منوی کناری: ستون ثابت با فهرست قابل‌اسکرول (در صفحه‌های کوچک و کوتاه هم کامل دیده می‌شود)؛ dvh = ارتفاع واقعی صفحه در موبایل (بدون نوار آدرس) */
+.app-sider.ant-layout-sider { position: sticky; top: 0; height: 100vh; height: 100dvh; overflow: hidden; }
+.app-sider > .ant-layout-sider-children { display: flex; flex-direction: column; height: 100%; min-height: 0; }
+.menu-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding-bottom: 56px; }
+.menu-scroll-drawer { height: calc(100vh - 56px); height: calc(100dvh - 56px); }

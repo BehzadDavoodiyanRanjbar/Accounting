@@ -1,0 +1,49 @@
+name: moin-taraz
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: MoinTaraz_Local_2026
+      TZ: Asia/Tehran
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  app:
+    build: ./app
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://postgres:MoinTaraz_Local_2026@db:5432/postgres
+      BACKUP_DIR: /backups
+      PORT: "3000"
+      TZ: Asia/Tehran
+      ALLOW_REGISTRATION: ${ALLOW_REGISTRATION:-0}
+      REG_AUTO_APPROVE: ${REG_AUTO_APPROVE:-0}
+      CAPTCHA: ${CAPTCHA:-1}
+      PUBLIC_URL: ${PUBLIC_URL:-}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_SECURE: ${SMTP_SECURE:-0}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      SMTP_FROM: ${SMTP_FROM:-}
+      SMTP_FROM_NAME: ${SMTP_FROM_NAME:-}
+      MO_V1_SANDBOX_URL: ${MO_V1_SANDBOX_URL:-}
+      MO_V1_PROD_URL: ${MO_V1_PROD_URL:-}
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backups:/backups
+      - ./import:/import
+
+volumes:
+  pgdata:
+    name: moin_taraz_pgdata

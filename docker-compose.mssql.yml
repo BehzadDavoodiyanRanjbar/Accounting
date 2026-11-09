@@ -1,0 +1,53 @@
+# اجرای آزمایشی نسخه‌ی SQL Server روی همین کامپیوتر (کاملاً جدا از نسخه‌ی PostgreSQL و داده‌های فعلی شما)
+# آدرس: http://localhost:3001      —  برای اجرا: start-mssql-test.bat
+name: moin-taraz-mssql
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: "MoinTaraz_Sa_2026!"
+      MSSQL_MEMORY_LIMIT_MB: "2048"
+    volumes:
+      - mssqldata:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -Q \"SELECT 1\" || exit 1"]
+      interval: 8s
+      timeout: 5s
+      retries: 30
+  mssql-init:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    depends_on:
+      mssql:
+        condition: service_healthy
+    restart: "no"
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        /opt/mssql-tools18/bin/sqlcmd -C -S mssql -U sa -P 'MoinTaraz_Sa_2026!' -Q "IF DB_ID('MoinTaraz') IS NULL CREATE DATABASE MoinTaraz; IF DB_ID('MoinTarazTest') IS NULL CREATE DATABASE MoinTarazTest;"
+  app:
+    build: ./app
+    restart: unless-stopped
+    depends_on:
+      mssql-init:
+        condition: service_completed_successfully
+    environment:
+      DB_TYPE: mssql
+      MSSQL_SERVER: mssql
+      MSSQL_DATABASE: MoinTaraz
+      MSSQL_USER: sa
+      MSSQL_PASSWORD: "MoinTaraz_Sa_2026!"
+      MSSQL_ENCRYPT: "true"
+      MSSQL_TRUST_CERT: "true"
+      BACKUP_DIR: /backups
+      PORT: "3000"
+      TZ: Asia/Tehran
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./backups-mssql:/backups
+volumes:
+  mssqldata:
+    name: moin_taraz_mssqldata
